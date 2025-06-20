@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "General Sans";
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.water_wave {
+    width: 100%;
+    height: 360px;
+    background: #35b3e7;
+    position: relative;
+    overflow: hidden;
+}
+
+.water_wave::after,
+.water_wave::before {
+    content: " ";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: 40%;
+    right: 10%;
+    background: #fff;
+}
+
+.water_wave::after {
+    border-radius: 45%;
+    animation: water_wave 5s ease-in infinite;
+}
+
+.water_wave::before {
+    border-radius: 35%;
+    background: rgba(255, 255, 255, .3);
+    animation: water_wave 5s ease-out infinite;
+}
+
+@keyframes water_wave {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: -50%;
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: -80%;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: -50%;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#minicircle {
+    transition: scale cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color: #888;
+    transition: transform ease-out 0.2s;
+}
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
+}
+
+#main {
+    width: 100%;
+    background-color: black;
+}
+
+#hero {
+    position: relative;
+    color: black;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+}
+
+#nav { 
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+    color: white;
+    background-color: #211b1b;
+    height: 120px;
+}
+
+#nav img {
+    width: 150px;
+    height: 150px;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+#nav h4 {
+    margin-top: 30px;
+    font-size: 1.2vw;
+}
+
+#nav a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
+
+#heading {
+    margin-top: 90px;
+}
+
+#heading h1 {
+    margin-left: 395px;
+    opacity: .6;
+    line-height: 1;
+    font-family: "General Sans Medium";
+    font-size: 9vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: black;
+}
+
+#heading h1:hover {
+    color: #00BFFF;
+    -webkit-text-stroke: 1px #00BFFF;
+}
+
+#heading h5 {
+    color: #fff;
+}
+
+#heading #secondh1 {
+    margin-left: 595px;
+}
+
+#chhoti {
+    font-weight: 1500;
+    margin-left: 366px;
+}
+
+.blocktext {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+}
+
+.blocktext h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: right;
+}
+
+#chhothiheading {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 100px;
+    padding-right: 30px;
+}
+
+#chhothiheading h5 {
+    text-transform: uppercase;
+    margin-top: .5vw;
+    font-size: 1vw;
+    text-align: right;
+    color: #fff;
+}
+
+#herofooter {
+    padding: 0 2vw;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#herofooter a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#herofooter #iconset {
+    display: flex;
+    gap: 5px;
+}
+
+#herofooter .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+#second {
+    padding-top: 200px;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.elem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 100%;
+    padding: 3.5vw 1vw;
+    padding-right: 0;
+    border-top: 1px solid #888;
+}
+
+.elem h1 {
+    text-transform: uppercase;
+    font-size: 3.8vw;
+    opacity: .7;
+    color: #fff;
+}
+
+.elem a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.elemlast {
+    border-bottom: 1px solid #888;
+    background-color: black;
+}
+
+.elem img {
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding-left: 150px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-color: black;
+}
+
+#textabout {
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-right: 100px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+#textabout h1 {
+    text-transform: uppercase;
+    opacity: .5;
+    margin-bottom: 10px;
+}
+
+#textabout p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+#about img {
+    width: 30vw;
+    border-radius: 50%;
+}
+
+#textabout a {
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#textabout a:hover {
+    background-color: white;
+    color: black;
+    /* transition-delay: .3s; */
+}
+
+#subscribe {
+    color: #fff;
+    padding: 20px 30px;
+    background-color: black;
+}
+
+#subscribe h5 {
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+#subscribe h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#footer {
+    color: #fff;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 30px;
+}
+
+#footerleft {
+    display: flex;
+    gap: 30px;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+#footerright{
+    display: flex;
+    gap: 30px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.link a {
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link {
+    transition: opacity 400ms ease-in, transform 400ms ease-in;
+    transform-origin: right;
+}
+
+.inactive {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+}

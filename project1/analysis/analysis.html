@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+    <link rel="stylesheet" href="analysis.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html"><img src="logo.png" alt=""></a>
+    <div class="heading">
+        <h1>Water Footprint Analysis</h1>
+
+    </div>  
+    </header>
+    <div id="main">
+        <h1>model for analysis</h1>
+    <div id="container" style="width: 100%; height: 70vh" ></div>
+</div>
+
+
+<script>
+ anychart.onDocumentReady(function() {
+var data = [
+{x: "blue water", value: 1622},
+{x: "green water", value: 680},
+{x: "grey water", value: 450},
+{x: "available", value: 6800},
+{x: "indirect", value: 400},
+];
+
+// create the chart
+var chart = anychart.pie();
+
+// set the chart title
+<!-- chart.title("Model for the water footprint analysis"); -->
+
+// add the data
+chart.data(data);
+
+// display the chart in the container
+chart.container('container');
+chart.draw();
+//hi
+chart.legend().position("bottom");
+// set items layout
+chart.legend().itemsLayout("horizontal");
+
+
+});
+</script>
+
+
+</body>
+</html>
